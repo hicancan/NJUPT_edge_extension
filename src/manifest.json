@@ -13,7 +13,8 @@
     "storage",
     "cookies",
     "webRequest",
-    "activeTab"
+    "activeTab",
+    "networkStatus"
   ],
   "background": {
     "service_worker": "background/index.ts"
