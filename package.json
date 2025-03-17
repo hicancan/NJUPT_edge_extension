@@ -1,0 +1,47 @@
+{
+  "name": "njupt-edge-extension",
+  "version": "1.0.0",
+  "description": "南京邮电大学Edge浏览器插件，提供校园服务功能。",
+  "main": "src/background/index.ts",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "watch": "webpack --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest"
+  },
+  "keywords": [
+    "Edge",
+    "浏览器插件",
+    "校园服务",
+    "南京邮电大学"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "typescript": "^4.1.2",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.1",
+    "eslint": "^7.14.0",
+    "jest": "^26.6.0"
+  },
+  "browser": {
+    "background": "src/background/index.ts",
+    "content": "src/content/index.ts",
+    "popup": "src/popup/index.html"
+  },
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "cookies",
+    "webRequest",
+    "activeTab"
+  ]
+}
