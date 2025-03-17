@@ -1,5 +1,3 @@
-/njupt-edge-extension/njupt-edge-extension/src/assets/styles/popup.css
-
 /* Popup window styles */
 
 body {
@@ -21,6 +19,7 @@ body {
     padding: 15px;
 }
 
+/* 现有按钮样式 */
 .button {
     background-color: #4CAF50;
     border: none;
@@ -54,4 +53,216 @@ body {
 .success-message {
     color: green;
     font-size: 0.9em;
+}
+
+/* 新增样式 */
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 600px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.popup-header h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button, .logout-button, .settings-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2e8932;
+    color: white;
+}
+
+.login-button:hover, .logout-button:hover, .settings-button:hover {
+    background-color: #236b26;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.module-selector {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    overflow-y: auto;
+}
+
+.module-selector ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.module-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.module-item:hover {
+    background-color: #e0e0e0;
+}
+
+.module-item.active {
+    background-color: #daf0dc;
+    border-left: 4px solid #4CAF50;
+}
+
+.module-icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.home-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.module-container {
+    padding: 10px;
+}
+
+/* 校园网连接组件样式 */
+.network-connect {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.network-status {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-dot.green {
+    background-color: #4CAF50;
+}
+
+.status-dot.orange {
+    background-color: #FFA500;
+}
+
+.status-dot.red {
+    background-color: #F44336;
+}
+
+.status-dot.gray {
+    background-color: #9E9E9E;
+}
+
+.connect-form {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.saved-accounts select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.checkbox input {
+    margin-right: 8px;
+}
+
+.connect-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.connect-button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.connect-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #F44336;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #4CAF50;
+    margin-top: 15px;
+    font-size: 14px;
 }
